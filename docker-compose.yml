@@ -15,16 +15,17 @@ services:
     command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
       - .:/protospace-37445:cached
-      - bundle:/myapp/vendor/bundle 
       - /protospace-37445/tmp
       - node_modules:/myapp/node_modules
+      - bundle:/myapp/vendor/bundle
     ports:
       - "3000:3000"
     depends_on:
       - db
     stdin_open: true
     tty: true
-  volumes: 
-    mysql_data:
-    bundle: 
-    node_modules:
+volumes: 
+  mysql_data:
+  node_modules:
+  bundle:
+  
