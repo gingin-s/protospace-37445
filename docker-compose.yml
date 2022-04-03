@@ -16,8 +16,8 @@ services:
     volumes:
       - .:/protospace-37445:cached
       - /protospace-37445/tmp
-      - node_modules:/myapp/node_modules
-      - bundle:/myapp/vendor/bundle
+      - node_modules:/protospace-37445/node_modules
+      - bundle:/protospace-37445/vendor/bundle
     ports:
       - "3000:3000"
     depends_on:
